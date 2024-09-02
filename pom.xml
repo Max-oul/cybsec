@@ -27,7 +27,16 @@
         <url/>
     </scm>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
+        <!-- Supabase property -->
+        <supabase.database.url>${env.SUPABASE_DATABASE_URL}</supabase.database.url>
+        <supabase.database.user>${env.SUPABASE_DATABASE_USER}</supabase.database.user>
+        <supabase.database.password>${env.SUPABASE_DATABASE_PASSWORD}</supabase.database.password>
+        <supabase.url>${env.SUPABASE_URL}</supabase.url>
+        <supabase.anon.key>${env.SUPABASE_ANON_KEY}</supabase.anon.key>
+        <supabase.server>http://localhost:8080</supabase.server>
     </properties>
     <dependencies>
         <dependency>
@@ -80,6 +89,11 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.4</version>
         </dependency>
     </dependencies>
 
